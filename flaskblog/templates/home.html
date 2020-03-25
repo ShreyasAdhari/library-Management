@@ -1,0 +1,70 @@
+{%extends "layout.html"%}
+
+{%block styles%}
+<link rel="stylesheet" href="/static/home_style.css">
+{%endblock%}
+
+
+
+{%block content%}
+
+<div id="flash-msg">
+    {% with messages = get_flashed_messages()%}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success text-center" role="alert">
+  {{message}}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+</div>
+
+
+<div id="main-container">
+<div id="login-left">
+<div id="left-text-container">
+<div id="left-text">
+    <span>Welcome Back !</span>
+    <div>To keep Connected with us please</div>
+    <div>login with your details</div>
+</div>
+<div id="bottom-button-left">
+    <a href="{{url_for('login')}}"><button class="sign-btn" style="color:#fff;">Sign In</button></a>
+</div>
+</div>
+
+</div>
+    <div id="login-right">
+    <div id="right-text">
+     <span>Create Account</span>
+    </div>
+        <div id="form-div">
+            <form id="signup" method="post" action="" novalidate>
+            {{form.hidden_tag()}}
+             {{form.name(class="input-text",placeholder="Name")}}   <br>
+                {%for error in form.name.errors%}
+                <span class="error-msg">{{error}}</span>
+                {%endfor%}
+
+
+                {{form.email(class="input-text",placeholder="Email")}}<br>
+                {%for error in form.email.errors%}
+                <span class="error-msg">{{error}}</span>
+                {%endfor%}
+
+
+                {{form.password(class="input-text",placeholder="Password")}}
+                {%for error in form.password.errors%}<br>
+                <span class="error-msg">{{error}}</span>
+                {%endfor%}
+
+
+            </form>
+        </div>
+        <div id="bottom-button-right">
+    <button class="sign-btn" style="border:1px solid green;" type="submit" form="signup" value="signup">Sign Up</button>
+</div>
+    </div>
+</div>
+{%endblock%}

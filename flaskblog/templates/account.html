@@ -1,0 +1,34 @@
+{%extends "layout.html"%}
+{% block styles %}
+<link rel="stylesheet" href="static/acc_styles.css">
+{% endblock %}
+
+{% block content %}
+
+<div id="main-container">
+	<div id='top-nav-bar'>
+	<div id='title-nav'>Library Management System</div>
+	<div id='logout-nav'><a href='{{url_for("logout")}}'>Logout</a></div>
+</div>
+
+
+	<div id="side-panel">
+	<div class="side-panel-item"><a href="{{url_for('issued_user')}}">Issued Books</a></div>
+	<div class="side-panel-item"><a href="{{url_for('pending_user')}}">Pending Books</a></div>
+	<div class="side-panel-item"><a href="#">Check Recommendations</a></div>
+   </div>
+
+   <div id="main-panel">
+
+    {% block title%}{%endblock%}
+	{% block table_heading %}{% endblock %}
+    <div id="table-panel">
+   	{%block user%}
+	   {% endblock %}
+   		</div>
+
+</div>
+
+</div>
+
+{% endblock %}

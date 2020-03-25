@@ -1,0 +1,139 @@
+body,html
+{
+ height:100%;
+ width:100%;
+ margin:0;
+ padding:0;
+  background-image:url("/static/img/backdrop.jpg");
+}
+
+#main-container
+{
+  width:65%;
+  height:80%;
+  background:yellow;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  font-family: 'Raleway', sans-serif;
+   border:1px solid green;
+}
+
+#login-left
+{
+  float:left;
+  background:green;
+  width:45%;
+  height:100%;
+  margin:0;
+  overflow:hidden;
+
+  color:white;
+}
+
+#left-text-container
+{
+   height:100%;
+   width:100%;
+}
+
+#left-text
+{
+  text-align:center;
+  padding-top:45%;
+}
+
+#left-text span
+{
+   font-weight:600;
+   font-size:2.5rem;
+}
+
+#bottom-button-left
+{
+  text-align:center;
+  padding-top:10%;
+  color:white;
+}
+
+.sign-btn
+{
+  padding:10px 40px;
+  border-radius:20px;
+  background:none;
+  border:1px white solid;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.sign-btn:hover,
+.sign-btn:focus
+{
+ background:rgba(0,255,0,0.5);
+}
+
+
+#login-right
+{
+ margin:0;
+ float:right;
+ background:#fff;
+ height:100%;
+ width:55%;
+
+}
+
+#right-text
+{
+  text-align:center;
+  color:green;
+  padding-top:15%;
+  font-size:1.5rem;
+  font-weight:600;
+}
+
+#form-div
+{
+ text-align:center;
+ padding-top:15%;
+
+}
+
+form
+{
+  display:inline-block;
+  width:100%;
+
+}
+
+.input-text
+{
+  margin:2.5% 0;
+  padding:1% 0;
+  width:80%;
+  background:none;
+  border:none;
+  border-bottom:1px solid gray;
+}
+
+#bottom-button-right
+{
+  text-align:center;
+  padding-top:6%;
+}
+
+.error-msg
+{
+color:red;font-size:0.8rem;
+}
+
+#flash-msg
+{
+  margin-top:0.5%;
+  width:65%;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  font-family: 'Raleway', sans-serif;
+}

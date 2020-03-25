@@ -1,0 +1,89 @@
+html,body
+{
+ margin:0;
+ padding:0;
+ height:100%;
+ width:100%;
+ font:"Raleway" sans-serif;
+   background-image:url("/static/img/backdrop.jpg");
+
+}
+
+#main-container
+{
+ height:60%;
+ width:25%;
+ position:relative;
+ top:50%;
+ left:50%;
+ transform:translateX(-50%) translateY(-50%);
+ border:2px green solid;
+ background:#fff;
+}
+
+#top-text
+{
+  text-align:center;
+  padding-top:10%;
+  font-size:2rem;
+  color:green;
+}
+
+#top-text span
+{
+  border-bottom:1px solid green;
+}
+
+#form-div
+{
+   padding-top:5%;
+   text-align:center;
+}
+
+form
+{
+  display:inline-block;
+  width:100%;
+}
+
+.form-element
+{
+  margin:3% 0;
+  width:85%;
+
+  border:none;
+  border-bottom:1px solid gray;
+  padding:4% 0;
+}
+
+#login-link
+{
+  margin-top:10%;
+  text-align:center;
+}
+
+.sign-btn
+{
+
+  padding:10px 40px;
+  border-radius:20px;
+  color:green;
+  border:1px green solid;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.error-msg
+{
+color:red;font-size:0.8rem;
+}
+
+#flash-msg
+{
+  margin-top:0.5%;
+  width:25%;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  font-family: 'Raleway', sans-serif;
+}

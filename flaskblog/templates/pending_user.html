@@ -1,0 +1,33 @@
+{% extends "account.html" %}
+
+{% block title %}
+<div id="main-panel-heading"> <span>Pending Books<span> </div>
+{% endblock%}
+
+{% block table_heading %}
+<table class="w-100">
+    <tr>
+        <th class="w-10">ISBN</th>
+        <th class="w-30">BOOK NAME</th>
+        <th class="w-10">DUE DATE</th>
+        <th class="w-10">RETURNED</th>
+    </tr>
+</table>
+{% endblock%}
+
+{%block user%}
+
+<table class="w-100">
+    {% if books_pending %}
+    {% for tran in books_pending %}
+    <tr>
+        <th class="w-10">{{tran.isbn}}</th>
+        <th class="w-30">{{tran.book_name}}</th>
+        <th class="w-10">{{tran.due_date.strftime('%d/%m/%Y')}}</th>
+        <th class="w-10">{{tran.returned}}</th>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+
+{%endblock%}
